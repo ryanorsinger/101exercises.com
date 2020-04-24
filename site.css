@@ -7,6 +7,10 @@
 body {
     padding: 1em;
     background-color: #DDF1FE;
+
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
 }
 
 header {
@@ -25,6 +29,8 @@ main {
 main > section {
     margin: 2em;
     width: 50%;
+    flex: 1;
+
 }
 
 

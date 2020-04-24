@@ -40,3 +40,13 @@ footer {
 
 
 /* Set the max screen width of 1024 */
+@media screen and (max-width:992px) {
+    main {
+        display: block;
+    }
+
+    main img {
+        max-width: 100%;
+    }
+
+}

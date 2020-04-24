@@ -1,0 +1,42 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+
+body {
+    padding: 1em;
+    background-color: #DDF1FE;
+}
+
+header {
+    margin: 1em;
+}
+
+main {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+}
+
+
+main > section {
+    margin: 2em;
+    width: 50%;
+}
+
+
+#js-logo {
+    height: 158px;
+}
+
+footer {
+    margin: 1em;
+    position: fixed;
+    bottom: 1em;
+}
+
+
+/* Set the max screen width of 1024 */

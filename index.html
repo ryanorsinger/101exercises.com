@@ -10,7 +10,7 @@
 
       gtag('config', 'UA-164560583-1');
     </script>
-    
+
     <meta charset="UTF-8">
     <title>101Exercises.com</title>
     <meta name="description" content="101 Exercises for learning and practicing Python and JavaScript fundamentals data-types, operators, and functions">
@@ -20,7 +20,23 @@
     <link rel="icon" type="image/png" href="./img/101-hwy-sign.jpeg">
     <link rel="stylesheet" type="text/css" href="site.css">
 
+    <script>
+    /**
+    * Function that registers a click on an outbound link in Analytics.
+    * This function takes a valid URL string as an argument, and uses that URL string
+    * as the event label. Setting the transport method to 'beacon' lets the hit be sent
+    * using 'navigator.sendBeacon' in browser that support it.
+    */
+    var getOutboundLink = function(url) {
+      gtag('event', 'click', {
+        'event_category': 'outbound',
+        'event_label': url,
+        'transport_type': 'beacon',
+        'event_callback': function(){document.location = url;}
+      });
+    }
 
+    </script>
 </head>
 <body>
     <header>
@@ -30,14 +46,14 @@
 
     <main>
         <section id="js">
-            <a href="https://101-exercises.glitch.me">
+            <a href="https://101-exercises.glitch.me" onclick="getOutboundLink('https://101-exercises.glitch.me'); return false;">
                 <h2>101 Exercises in JavaScript</h2>
                 <img src="./img/js-logo.svg" alt="JavaScript logo" id="js-logo">
             </a>
         </section>
         
         <section id="python">
-            <a href="https://kaggle.com/ryanorsinger/101-exercises">
+            <a href="https://kaggle.com/ryanorsinger/101-exercises" onclick="getOutboundLink('https://kaggle.com/ryanorsinger/101-exercises'); return false;">
                 <h2>101 Exercises in Python</h2>
                 <img src="./img/python-logo.svg">
             </a>
@@ -45,7 +61,7 @@
     </main>
 
     <footer>
-        <a href="https://github.com/ryanorsinger">by Ryan Orsinger</p></a>
+        <a href="https://github.com/ryanorsinger" onclick="getOutboundLink('https://github.com/ryanorsinger'); return false;">by Ryan Orsinger</p></a>
     </footer>
 </body>
 </html>
